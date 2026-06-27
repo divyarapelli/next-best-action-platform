@@ -1,6 +1,12 @@
 # 🧠 Intelligent Next Best Action Platform
 ### **Submission for XLVentures.AI Hackathon 2026**
 
+![Groq](https://img.shields.io/badge/LLM-Groq%20LLaMA%203.3%2070B-orange)
+![FastAPI](https://img.shields.io/badge/Backend-FastAPI-green)
+![ChromaDB](https://img.shields.io/badge/VectorDB-ChromaDB-blue)
+![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red)
+![Python](https://img.shields.io/badge/Python-3.10+-blue)
+
 An AI-powered decision support system for B2B SaaS Customer Success teams that analyzes raw customer interactions, evaluates churn risk, retrieves company playbooks via RAG, consults historical action memory, and recommends structured Next Best Actions with a Human-in-the-Loop feedback loop.
 
 ---
@@ -19,7 +25,7 @@ Managing B2B accounts can feel like driving in unfamiliar territory. This platfo
 ## ⚙️ How It Works (6 Simple Steps)
 1. **Pasting Interactions:** The CSM paste meeting notes, emails, or call transcripts into the dashboard.
 2. **Fact & Context Extraction:** The **Context Agent** parses key details such as the company name, renewal countdown, specific complaints, and customer sentiment.
-3. **Risk & Urgency Scoring:** The **Risk Agent** uses Claude to classify churn risk (HIGH/MEDIUM/LOW), list risk factors, and score urgency on a scale of 1–10.
+3. **Risk & Urgency Scoring:** The **Risk Agent** uses Groq LLaMA 3.3 70B to classify churn risk (HIGH/MEDIUM/LOW), list risk factors, and score urgency on a scale of 1–10.
 4. **Semantic Playbook Search (RAG):** The **RAG Agent** queries a ChromaDB vector database containing company playbooks to retrieve exact rules for the situation.
 5. **Memory Retrieval:** The system retrieves similar past customer scenarios and their outcomes from the SQLite database.
 6. **Synthesis & Human Review:** The **Planner Agent** fuses all the insights into 3 ranked recommendations. The CSM approves or rejects each action, logging their decision to retrain the memory system.
@@ -43,14 +49,14 @@ Managing B2B accounts can feel like driving in unfamiliar territory. This platfo
        v                               v                               v
 +------+-------+               +-------+-------+               +-------+-------+
 |  RAG Agent   |               |  Risk Agent   |               | Context Agent |
-| (ChromaDB)   |               | (Claude 3.5)  |               | (Claude 3.5)  |
+| (ChromaDB)   |               | (Groq LLaMA 3.3 70B)  |               | (Groq LLaMA 3.3 70B)  |
 +------+-------+               +-------+-------+               +-------+-------+
        |                               |                               |
        +-------------------------------+-------------------------------+
                                        |
                                        v
                        +---------------+---------------+
-                       |  Synthesizer (Claude 3.5)     |
+                       |  Synthesizer (Groq LLaMA 3.3 70B)     |
                        +---------------+---------------+
                                        |
                                        v
@@ -81,7 +87,7 @@ Managing B2B accounts can feel like driving in unfamiliar territory. This platfo
 | **Streamlit** | Frontend UI | Clean, dual-column dashboard for CSM workflows |
 | **ChromaDB** | Vector DB | Persistent semantic indexing of `.txt` playbook rules |
 | **SQLite + SQLAlchemy** | Relational DB | Local transaction history and action memory storage |
-| **Claude 3.5 Sonnet** | LLM Engine | Powering Context, Risk, and Synthesis Planner Agents |
+| **Groq LLaMA 3.3 70B** | LLM Engine | Ultra-fast inference powering Context, Risk, and Planner Agents via Groq API |
 | **Pydantic** | Schema Validation | Ensures structured data contracts across endpoints |
 
 ---
@@ -102,7 +108,7 @@ pip install -r requirements.txt
 ### 3. Configure Environment Variables
 Create a `.env` file in the root folder:
 ```env
-ANTHROPIC_API_KEY=your_claude_api_key_here
+GROQ_API_KEY=your_groq_api_key_here
 CHROMA_DB_PATH=./chroma_db
 SQLITE_DB_PATH=./memory/actions.db
 PLAYBOOKS_PATH=./data/playbooks
