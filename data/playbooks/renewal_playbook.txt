@@ -1,0 +1,26 @@
+RENEWAL PLAYBOOK — CUSTOMER SUCCESS TEAM
+==========================================
+
+RULE 1: Customer has not responded to any renewal outreach within the 30-day window
+ACTION: Escalate immediately. Send a personalized email from the CSM referencing specific value delivered this year, then follow up with a phone call within 48 hours. If still no response after five business days, have your manager or VP of Customer Success reach out directly. Simultaneously alert the Account Executive to prepare a save plan.
+REASON: Silence at renewal is one of the strongest churn indicators. Customers who intend to renew typically respond quickly. A lack of response usually means they are evaluating alternatives, waiting for internal budget approval to deny renewal, or have already made a decision to leave and are avoiding the conversation.
+
+RULE 2: Customer agrees to renew but asks for a significant discount
+ACTION: Before discussing pricing, schedule a 30-minute value review call. Walk through their usage metrics, support tickets resolved, time saved, and any business outcomes tied to the platform. Present renewal pricing alongside the documented ROI. If a discount is still needed, offer value-based concessions such as a multi-year commitment for a lower rate, or adding seats instead of cutting price per seat. Loop in your Account Executive for final negotiation.
+REASON: Discounting without context trains customers to ask for more every cycle. Anchoring the conversation to measurable outcomes positions the price as justified. Value-based concessions protect margins while giving the customer a win they can present internally.
+
+RULE 3: Customer's primary champion or decision-maker has changed since the last renewal
+ACTION: Identify the new stakeholder within the first week of the 30-day window. Request an introduction from your existing contact or reach out directly with a brief summary of the partnership history and results. Offer a dedicated onboarding session for the new stakeholder to walk through current usage, integrations, and the roadmap. Treat this as a mini-sale and tailor your messaging to their priorities.
+REASON: New decision-makers have no loyalty to the existing vendor and often want to bring in tools they have used before. If you do not establish a relationship and demonstrate value to them personally before the renewal date, you are letting a stranger decide the fate of your account with zero context.
+
+RULE 4: Customer's usage or engagement has dropped significantly in the last 90 days
+ACTION: Pull a detailed usage report and identify which features or workflows have declined. Reach out to the customer with specific observations, not generic check-ins. For example, say "We noticed your team stopped using the automated reporting module in March — can we walk through what changed?" Offer a re-enablement session or a tailored training workshop before the renewal conversation begins. Flag the account as at-risk in your CRM and brief your manager.
+REASON: Low usage heading into renewal means the customer is not getting enough value to justify the cost. Asking them to renew without addressing the engagement gap invites objections you cannot counter. Proactively solving the problem demonstrates partnership and gives the customer a reason to stay.
+
+RULE 5: Customer is up for renewal and has open support tickets or unresolved issues
+ACTION: Audit all open tickets and escalate any that are older than seven days. Coordinate with the Support and Engineering teams to get firm resolution timelines. Communicate those timelines to the customer directly and own the follow-up. Do not initiate the formal renewal conversation until the most critical issues are resolved or have a clear path to resolution with a committed date.
+REASON: Asking a customer to sign a renewal while they have outstanding problems signals that you care more about the contract than their experience. Resolving issues first removes the biggest leverage point they have to delay, negotiate aggressively, or churn. It also rebuilds trust right before the most important moment in the relationship.
+
+RULE 6: Customer is a strong account with high usage and no risk signals
+ACTION: Do not treat healthy renewals as administrative tasks. Schedule a brief strategic review to share their usage highlights, preview upcoming product features relevant to their use case, and explore expansion opportunities such as additional seats, higher-tier plans, or new modules. Present the renewal as a continuation of a growth partnership, not a contract formality. Propose a multi-year agreement if appropriate.
+REASON: Healthy accounts are your best expansion revenue opportunities, and renewal is the natural moment to have that conversation. If you only process the paperwork, you leave money on the table and miss the chance to deepen the relationship. Customers who feel invested in the product roadmap and see a growth path are far less likely to evaluate competitors at the next cycle.

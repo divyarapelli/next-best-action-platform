@@ -1,0 +1,26 @@
+COMPETITOR PLAYBOOK — CUSTOMER SUCCESS TEAM
+=============================================
+
+RULE 1: Customer says they are evaluating a competitor alongside renewal
+ACTION: Acknowledge their due diligence without being defensive. Schedule a value review meeting within 48 hours to walk through their usage data, ROI metrics, and outcomes achieved since onboarding. Prepare a side-by-side comparison focusing on areas where our platform has already delivered measurable results for them.
+REASON: Customers evaluating alternatives at renewal are signaling dissatisfaction or pressure from leadership to justify spend. Leading with their own success data reframes the conversation around proven value rather than feature checklists.
+
+RULE 2: Customer forwards a competitor's pricing sheet or asks for a price match
+ACTION: Do not engage in a line-item price comparison. Instead, shift the conversation to total cost of ownership. Highlight migration costs, onboarding time, integration rebuild effort, and the productivity loss during transition. Loop in your Account Executive to discuss flexible pricing or packaging options if needed.
+REASON: Competing on price alone erodes margins and positions our product as a commodity. Customers rarely account for the hidden costs of switching, and surfacing those costs changes the math in our favor.
+
+RULE 3: Customer mentions a specific competitor feature we do not have
+ACTION: Listen carefully and document the exact use case behind the feature request. Check the product roadmap to see if it is planned. If it is, share the expected timeline with appropriate caveats. If it is not, submit a detailed feature request to the Product team and follow up with the customer within one week with a status update or a workaround using existing functionality.
+REASON: Customers rarely want a feature for its own sake. They have an underlying problem to solve. Understanding the use case often reveals that our platform can already address it through a different workflow, and it gives Product real customer evidence to prioritize against.
+
+RULE 4: Customer mentions a competitor unprompted during a routine check-in
+ACTION: Stay calm and curious. Ask open-ended questions such as "What caught your attention about them?" or "Is there something you feel is missing from your current setup?" Document the response in the CRM and flag the account as at-risk in your internal health scoring. Brief your manager and Account Executive within 24 hours.
+REASON: An unprompted competitor mention is an early churn signal. Reacting defensively shuts down honesty. Treating it as a discovery conversation gives you the information you need to intervene before the customer has made a decision.
+
+RULE 5: Customer says a competitor's customer support or service is better
+ACTION: Apologize for any experience that fell short of expectations. Review their recent support tickets and identify specific incidents that caused frustration. Offer a concrete remediation plan such as assigning a dedicated support contact, adjusting SLA tiers, or scheduling proactive monthly syncs. Follow through within one business day.
+REASON: Service complaints are about trust, not technology. If a customer believes they will get better support elsewhere, no feature advantage will retain them. Demonstrating accountability and immediate action rebuilds the relationship faster than any pitch.
+
+RULE 6: A churned customer left for a competitor and is now expressing interest in returning
+ACTION: Treat them as a warm lead, not a returning problem. Conduct a structured win-back interview to understand what went wrong during their time away and what has changed. Offer a tailored re-onboarding plan that addresses their original reasons for leaving. Coordinate with Sales on competitive win-back pricing if applicable.
+REASON: Customers who return after trying a competitor are among the most loyal long-term accounts if handled well. They have direct comparative experience and chose to come back. Making their return seamless validates their decision and creates a strong internal advocate.
