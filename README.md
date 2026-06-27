@@ -157,7 +157,7 @@ streamlit run frontend/app.py
 
 ---
 
-## 🏆 Hackathon Evaluation Criteria Coverage
+# Evaluation Criteria Coverage
 
 | Criterion | How We Address It |
 |---|---|
