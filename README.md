@@ -33,7 +33,6 @@ Managing B2B accounts can feel like driving in unfamiliar territory. This platfo
 ---
 
 ## 🏗️ System Architecture
-
 ```
                        +-------------------------------+
                        |   Raw Customer Interaction    |
