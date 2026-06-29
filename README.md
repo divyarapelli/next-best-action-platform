@@ -7,32 +7,73 @@
 ![Streamlit](https://img.shields.io/badge/Frontend-Streamlit-red)
 ![Python](https://img.shields.io/badge/Python-3.10+-blue)
 
-An AI-powered decision support system for B2B SaaS Customer Success teams that analyzes raw customer interactions, evaluates churn risk, retrieves company playbooks via RAG, consults historical action memory, and recommends structured Next Best Actions with a Human-in-the-Loop feedback loop.
+---
+
+## 📋 Team Information
+
+### Team Name
+**[Team Name Placeholder]**
+
+### Team Members
+- **[Member 1 Name]** - [Role]
+- **[Member 2 Name]** - [Role]
+- **[Member 3 Name]** - [Role]
+- **[Member 4 Name]** - [Role]
 
 ---
 
-## 🗺️ The Google Maps Analogy
-Managing B2B accounts can feel like driving in unfamiliar territory. This platform acts as **Google Maps for Customer Success Managers (CSMs)**:
-* **The Coordinates:** The raw CRM interaction notes or emails represent your current vehicle position.
-* **The Hazards:** The **Risk Agent** checks for speed traps, road closures, or bad weather (churn warning signs).
-* **The Route Rules:** The **RAG Agent** reads the road signs and highway code (Company Playbooks) to ensure compliance.
-* **Past Driver History:** The **Memory Store** checks how past drivers handled this exact stretch of road.
-* **The Next Turn:** The **Planner Agent** calculates the optimal route and says *"In 500 feet, turn left"* (Next Best Actions).
-* **The Driver in the Loop:** The CSM still holds the steering wheel. They can accept or override the guidance (Approve/Reject), which immediately updates the map's traffic data for the next driver (SQLite memory).
+## 📌 Project Title
+**Intelligent Next Best Action Platform**
 
 ---
 
-## ⚙️ How It Works (6 Simple Steps)
-1. **Pasting Interactions:** The CSM paste meeting notes, emails, or call transcripts into the dashboard.
-2. **Fact & Context Extraction:** The **Context Agent** parses key details such as the company name, renewal countdown, specific complaints, and customer sentiment.
-3. **Risk & Urgency Scoring:** The **Risk Agent** uses Groq LLaMA 3.3 70B to classify churn risk (HIGH/MEDIUM/LOW), list risk factors, and score urgency on a scale of 1–10.
-4. **Semantic Playbook Search (RAG):** The **RAG Agent** queries a ChromaDB vector database containing company playbooks to retrieve exact rules for the situation.
-5. **Memory Retrieval:** The system retrieves similar past customer scenarios and their outcomes from the SQLite database.
-6. **Synthesis & Human Review:** The **Planner Agent** fuses all the insights into 3 ranked recommendations. The CSM approves or rejects each action, logging their decision to retrain the memory system.
+## 🎯 Problem Statement
+B2B SaaS Customer Success teams struggle with:
+- **Information Overload:** Customer interactions across emails, calls, and tickets create fragmented data
+- **Inconsistent Decision Making:** Different CSMs handle similar situations differently
+- **Missed Churn Signals:** Early warning signs go unnoticed until it's too late
+- **Playbook Compliance:** Company best practices exist but aren't consistently applied
+- **Knowledge Silos:** Valuable lessons from past interactions aren't systematically reused
+
+This platform solves these challenges by using AI to analyze customer interactions, assess risk, retrieve relevant playbooks, and recommend data-driven Next Best Actions with human oversight.
 
 ---
 
-## 🏗️ System Architecture
+## ✨ Features
+
+### Core Capabilities
+- **Multi-Agent AI System:** Specialized agents for context extraction, risk analysis, and action planning
+- **Real-time Risk Assessment:** Churn risk scoring (HIGH/MEDIUM/LOW) with urgency metrics
+- **RAG-Powered Playbook Retrieval:** Semantic search across company playbooks using ChromaDB
+- **Historical Memory System:** SQLite-based storage of past decisions for continuous learning
+- **Human-in-the-Loop:** CSM approval/rejection workflow with feedback logging
+- **Email Generation:** AI-powered email draft generation for approved actions
+- **Export Reports:** Downloadable analysis reports for documentation
+
+### Key Metrics
+- **Health Score:** 0-100 customer health assessment
+- **Urgency Score:** 1-10 priority ranking
+- **Confidence Levels:** 0-100% recommendation confidence
+- **RAG Hits:** Number of relevant playbook rules retrieved
+- **Memory Hits:** Number of similar past scenarios found
+
+---
+
+## 🛠️ Tech Stack
+
+| Technology | Layer | Purpose |
+|---|---|---|
+| **Python 3.10+** | Core Language | Foundation of backend services and agents |
+| **FastAPI** | Backend | High-performance REST API with CORS enablement |
+| **Streamlit** | Frontend UI | Clean, dual-column dashboard for CSM workflows |
+| **ChromaDB** | Vector DB | Persistent semantic indexing of `.txt` playbook rules |
+| **SQLite + SQLAlchemy** | Relational DB | Local transaction history and action memory storage |
+| **Groq LLaMA 3.3 70B** | LLM Engine | Ultra-fast inference powering Context, Risk, and Planner Agents via Groq API |
+| **Pydantic** | Schema Validation | Ensures structured data contracts across endpoints |
+
+---
+
+## 🏗️ Architecture
 
 ```
                        +-------------------------------+
@@ -78,90 +119,118 @@ Managing B2B accounts can feel like driving in unfamiliar territory. This platfo
 
 ---
 
-## 🛠️ Tech Stack
+## 🔄 Workflow
 
-| Technology | Layer | Purpose |
-|---|---|---|
-| **Python 3.10+** | Core Language | Foundation of backend services and agents |
-| **FastAPI** | Backend | High-performance REST API with CORS enablement |
-| **Streamlit** | Frontend UI | Clean, dual-column dashboard for CSM workflows |
-| **ChromaDB** | Vector DB | Persistent semantic indexing of `.txt` playbook rules |
-| **SQLite + SQLAlchemy** | Relational DB | Local transaction history and action memory storage |
-| **Groq LLaMA 3.3 70B** | LLM Engine | Ultra-fast inference powering Context, Risk, and Planner Agents via Groq API |
-| **Pydantic** | Schema Validation | Ensures structured data contracts across endpoints |
+### Step-by-Step Process
+1. **Input:** CSM pastes customer interaction text (meeting notes, emails, call transcripts)
+2. **Context Extraction:** AI parses customer name, renewal days, complaints, sentiment, key topics
+3. **Risk Analysis:** AI evaluates churn risk level, health score, urgency score
+4. **Playbook Retrieval:** RAG searches ChromaDB for relevant playbook rules
+5. **Memory Lookup:** System retrieves similar past scenarios and outcomes
+6. **Action Planning:** AI synthesizes all inputs into 3 ranked Next Best Actions
+7. **Human Review:** CSM approves or rejects each recommendation
+8. **Feedback Loop:** Decisions logged to SQLite for continuous learning
+9. **Email Generation:** AI drafts professional email for approved actions
+10. **Export:** CSM can download analysis report
 
 ---
 
-## 🚀 Setup & Installation
+## 📸 Screenshots
 
-### 1. Clone & Set Up Directory
+### Dashboard View
+- Input panel for customer interactions
+- Risk assessment display with health metrics
+- Recommended actions with confidence scores
+- Approval/rejection buttons
+
+### Analysis Results
+- Risk level badge (HIGH/MEDIUM/LOW)
+- Health score gauge (0-100)
+- Urgency score indicator
+- RAG knowledge hits count
+- Memory hits count
+
+### Email Generation
+- Subject line preview
+- Email body preview
+- Copy/download options
+
+---
+
+## 🔗 GitHub Repository
+https://github.com/divyarapelli/next-best-action-platform
+
+---
+
+## 🚀 Setup Instructions
+
+### 1. Clone Repository
 ```bash
-git clone https://github.com/your-username/next-best-action-platform.git
+git clone https://github.com/divyarapelli/next-best-action-platform.git
 cd next-best-action-platform
 ```
 
-### 2. Install Dependencies
+### 2. Create Virtual Environment
+```bash
+python -m venv venv
+source venv/bin/activate  # On Windows: venv\Scripts\activate
+```
+
+### 3. Install Dependencies
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Configure Environment Variables
+### 4. Configure Environment Variables
 Create a `.env` file in the root folder:
 ```env
 GROQ_API_KEY=your_groq_api_key_here
-CHROMA_DB_PATH=./chroma_db
+CHROMA_DB_PATH=./chroma_db_v2
 SQLITE_DB_PATH=./memory/actions.db
 PLAYBOOKS_PATH=./data/playbooks
+MODEL_NAME=llama-3.3-70b-versatile
 ```
 
-### 4. Seed Playbooks & Run Ingestion
-Add your playbook `.txt` files (e.g. `competitor_playbook.txt`, `renewal_playbook.txt`, `support_playbook.txt`) into `./data/playbooks/` and run ingestion to build the vector index:
+### 5. Seed Playbooks
+Add your playbook `.txt` files (e.g. `competitor_playbook.txt`, `renewal_playbook.txt`, `support_playbook.txt`) into `./data/playbooks/` and run ingestion:
 ```bash
 python -m backend.knowledge_base.ingest
 ```
 
-### 5. Start Backend Server (FastAPI)
+### 6. Start Backend Server
 ```bash
 uvicorn backend.app:app --host 127.0.0.1 --port 8000 --reload
 ```
 
-### 6. Start Frontend Dashboard (Streamlit)
+### 7. Start Frontend Dashboard
 Open a new terminal window:
 ```bash
 streamlit run frontend/app.py
 ```
 
----
-
-## 💡 Demo Scenarios
-
-### Scenario A: Churn & Competitor Risk at Renewal
-* **Input Text:** 
-  > *"Had a call with Acme Corp today. They mentioned their renewal is coming up in 20 days. The champion sounded frustrated because they have two unresolved high-priority bugs open. She mentioned that they are evaluating Gainsight to see if they offer more responsive support."*
-* **Expected Output:**
-  * **Risk:** `HIGH`
-  * **Actions Recommended:**
-    1. Escalate the unresolved bugs to Engineering immediately (from Support Playbook).
-    2. Arrange a QBR/value review with the key stakeholders to highlight past ROI (from Renewal Playbook).
-    3. Shift conversation to migration costs and total cost of ownership (from Competitor Playbook).
-
-### Scenario B: Missing Feature / Price Match Discussion
-* **Input Text:**
-  > *"Spoke to Delta Systems. They liked our recent demo but forwarded a competitor pricing sheet. They asked if we could match their lower price, and also complained that we lack the automated reporting module they need."*
-* **Expected Output:**
-  * **Risk:** `MEDIUM`
-  * **Actions Recommended:**
-    1. Conduct a TCO calculation showing transition costs instead of discounting (from Competitor Playbook).
-    2. Discover and document the use case behind the automated reporting feature (from Competitor Playbook).
-    3. Loop in the Account Executive to negotiate value-based terms (from Competitor Playbook).
+### 8. Access Application
+Open http://localhost:8501 in your browser
 
 ---
 
-# Evaluation Criteria Coverage
+## 🔮 Future Improvements
 
-| Criterion | How We Address It |
-|---|---|
-| **AI Capabilities** | Implements a robust multi-agent pattern with specialized extraction, classification, and planning roles. Prompts enforce strict JSON schemas for predictable programmatic ingestion. |
-| **Business Impact** | Directly targets SaaS churn prevention and upselling. Fuses operational data (renewals, support tickets, competitor threats) into actionable plays for front-line CSMs. |
-| **Technical Design** | Decoupled agent architecture, fast semantic retrieval via ChromaDB vector indexing, and persistent relational memory. Highly performant REST endpoints using FastAPI. |
-| **Human in the Loop** | Gives human agents final veto power. Decisions are logged directly to the system's SQLite memory, showing a continuous pathway to model-refinement. |
+### Planned Enhancements
+- **Multi-language Support:** Expand beyond English for global teams
+- **Integration Hub:** Connect to CRM systems (Salesforce, HubSpot)
+- **Advanced Analytics:** Dashboard with churn prediction trends
+- **Mobile App:** iOS/Android app for on-the-go CSMs
+- **Voice Input:** Speech-to-text for call transcript analysis
+- **Collaborative Features:** Team notes and shared playbooks
+- **A/B Testing:** Test different action recommendations
+- **Custom Models:** Fine-tune models on company-specific data
+- **Real-time Alerts:** Proactive notifications for high-risk accounts
+- **API for Developers:** Enable third-party integrations
+
+### Technical Enhancements
+- **Caching Layer:** Redis for faster response times
+- **Rate Limiting:** Protect API endpoints
+- **Authentication:** OAuth2/JWT for secure access
+- **Monitoring:** Prometheus/Grafana for system health
+- **Testing:** Comprehensive unit and integration tests
+- **CI/CD Pipeline:** Automated testing and deployment
