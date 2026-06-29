@@ -1,5 +1,5 @@
 # 🧠 Intelligent Next Best Action Platform
-### **Submission for XLVentures.AI Hackathon 2026**
+
 
 ![Groq](https://img.shields.io/badge/LLM-Groq%20LLaMA%203.3%2070B-orange)
 ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-green)
@@ -49,7 +49,7 @@ Managing B2B accounts can feel like driving in unfamiliar territory. This platfo
 +------+-------+               +-------+-------+-------+               +-------+-------+-------+
 |  RAG Agent   |               |  Risk Agent           |               | Context Agent         |
 | (ChromaDB)   |               | (Groq LLaMA 3.3 70B)  |               | (Groq LLaMA 3.3 70B)  |
-+------+-------+               +-------+-------+                         +-------+-------+
++------+-------+               +-------+-------+-------+               +------ +-------+-------+
        |                               |                                          |
        +-------------------------------+-------------------------------+----------+
                                        |
