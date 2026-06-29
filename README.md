@@ -12,13 +12,12 @@
 ## 📋 Team Information
 
 ### Team Name
-**[Team Name Placeholder]**
+AgentX
 
 ### Team Members
-- **[Member 1 Name]** - [Role]
-- **[Member 2 Name]** - [Role]
-- **[Member 3 Name]** - [Role]
-- **[Member 4 Name]** - [Role]
+- DIVYA RAPELLI - 24075A6711
+- AKHILA - 24075A6712
+
 
 ---
 
