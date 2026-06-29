@@ -1,5 +1,5 @@
 # 🧠 Intelligent Next Best Action Platform
-### **Submission for XLVentures.AI Hackathon 2026**
+
 
 ![Groq](https://img.shields.io/badge/LLM-Groq%20LLaMA%203.3%2070B-orange)
 ![FastAPI](https://img.shields.io/badge/Backend-FastAPI-green)
@@ -73,8 +73,7 @@ This platform solves these challenges by using AI to analyze customer interactio
 
 ---
 
-## 🏗️ Architecture
-
+## 🏗️ System Architecture
 ```
                        +-------------------------------+
                        |   Raw Customer Interaction    |
@@ -91,7 +90,7 @@ This platform solves these challenges by using AI to analyze customer interactio
 +------+-------+               +-------+-------+-------+               +-------+-------+-------+
 |  RAG Agent   |               |  Risk Agent           |               | Context Agent         |
 | (ChromaDB)   |               | (Groq LLaMA 3.3 70B)  |               | (Groq LLaMA 3.3 70B)  |
-+------+-------+               +-------+-------+                         +-------+-------+
++------+-------+               +-------+-------+-------+               +------ +-------+-------+
        |                               |                                          |
        +-------------------------------+-------------------------------+----------+
                                        |
