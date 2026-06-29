@@ -140,7 +140,32 @@ def generate_email(req: GenerateEmailRequest):
             max_tokens=400
         )
         
-        result = json.loads(response.choices[0].message.content)
+        raw_content = response.choices[0].message.content
+        print(f"Groq raw response: {raw_content[:500]}")
+        
+        # Try to parse JSON, strip markdown if present
+        content = raw_content.strip()
+        if content.startswith("```json"):
+            content = content[7:]
+        if content.startswith("```"):
+            content = content[3:]
+        if content.endswith("```"):
+            content = content[:-3]
+        content = content.strip()
+        
+        print(f"After stripping: {content[:500]}")
+        
+        # Use demjson3 to handle single-quoted JSON
+        try:
+            import demjson3
+            result = demjson3.decode(content)
+        except ImportError:
+            # Fallback: replace single quotes with double quotes (carefully)
+            import re
+            content = re.sub(r"'([^']*)':", r'"\1":', content)  # keys
+            content = re.sub(r": '([^']*)'", r': "\1"', content)  # values
+            result = json.loads(content)
+        
         return {"subject": result["subject"], "body": result["body"]}
         
     except Exception as exc:
